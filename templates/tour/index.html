@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block page_title %}
+Index
+{% endblock %}
+
+{% block main %}
+<h2>Please Choose your status</h2>
+<a href="{% url 'tour:guide' %}">Guide</a>
+<br>
+<a href="{% url 'tour:driver' %}">Driver</a>
+{% endblock %}

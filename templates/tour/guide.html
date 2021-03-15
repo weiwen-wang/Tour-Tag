@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Guide
+{% endblock %}
+
+{% block page_title %}
+Guide
+{% endblock %}
+
+{% block main %}
+<form action="" method="post">{% csrf_token %}
+    {{ form|crispy }}
+<button type="submit" class="btn btn-primary">提交</button>
+</form>
+<br>
+<br>
+<div class="card">
+    <div class="card-header">
+        Boat Status
+    </div>
+    <div class="card-body">
+        Status: {{ boot.status }}<br>
+        Port: {{ boot.port }}
+    </div>
+</div>
+{% endblock %}
