@@ -28,6 +28,7 @@ class Boot(models.Model):
 
 
 class Voyage(models.Model):
+    #ship = models.CharField(max_length=255)
     depart_time = models.DateTimeField()
 
     def __str__(self):

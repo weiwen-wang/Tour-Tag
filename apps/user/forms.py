@@ -12,7 +12,7 @@ class LoginForm(AuthenticationForm):
         widget=forms.TextInput(attrs={'autofocus': True, 'class': 'form-control form-control-lg'}),
     )
     password = forms.CharField(
-        label="密码",
+        label="password",
         strip=False,
         widget=forms.PasswordInput(attrs={'autocomplete': 'current-password', 'class': 'form-control form-control-lg'}),
     )
@@ -20,17 +20,17 @@ class LoginForm(AuthenticationForm):
 
 class RegisterForm(UserCreationForm):
     username = forms.CharField(
-        label='用户名',
+        label='username',
         widget=widgets.TextInput(attrs={'autofocus': True, 'class': 'form-control form-control-lg'})
     )
     password1 = forms.CharField(
-        label="密码",
+        label="password",
         strip=False,
         widget=forms.PasswordInput(attrs={'autocomplete': 'new-password', 'class': 'form-control form-control-lg'}),
         help_text=password_validation.password_validators_help_text_html(),
     )
     password2 = forms.CharField(
-        label="确认密码",
+        label="confirm password",
         widget=forms.PasswordInput(attrs={'autocomplete': 'new-password', 'class': 'form-control form-control-lg'}),
         strip=False,
         help_text="Enter the same password as before, for verification.",
